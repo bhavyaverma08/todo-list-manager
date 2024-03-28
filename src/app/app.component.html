@@ -1,5 +1,11 @@
-<app-navbar></app-navbar>
-<div style="height:80vh">
-  <router-outlet></router-outlet>
+<div class="main-application-container">
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+  <div class="main-content-container">
+    <router-outlet></router-outlet>
+  </div>
+  <div>
+    <app-footer></app-footer>
+  </div>
 </div>
-<app-footer></app-footer>

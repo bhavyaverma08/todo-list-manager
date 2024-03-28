@@ -1,0 +1,12 @@
+.intro-image-class{
+    height: 250px;
+    width: 250px;
+}
+
+.instructions-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
