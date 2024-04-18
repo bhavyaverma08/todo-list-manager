@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+primary-color {
+  color: #ff8303;
+}
+
+seconday-color {
+  color: #edebca;
+}
+
+.primary-btn {
+  color: #fff;
+  background-color: #ff8303;
+  height: 30px;
+  padding: 0px 8px;
+}
+
+.primary-btn:hover {
+  color: #ff8303;
+  background-color: #fff;
+  border: 1px solid #ff8303;
+  height: 30px;
+  padding: 0px 8px;
+}
+
+.secondary-btn {
+  color: #000;
+  background-color: #edebca;
+  height: 30px;
+  padding: 0px 8px;
+}
+
+.secondary-btn:hover {
+  color: #000;
+  background-color: #edebca;
+  border: 1px solid #000;
+  height: 30px;
+  padding: 0px 8px;
+}
