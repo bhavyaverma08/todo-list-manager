@@ -1,0 +1,11 @@
+.todo-card-style {
+  border: 1px solid #edebca;
+  border-radius: 10px;
+}
+
+.delete-btn{
+    color: white;
+    background-color: red;
+    height: 30px;
+    padding: 0px 8px;
+}

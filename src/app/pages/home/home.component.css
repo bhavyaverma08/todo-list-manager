@@ -10,3 +10,8 @@
     width: 100%;
     justify-content: center;
 }
+
+.orange-button{
+    background-color: #FF8303;
+    width: 100px;
+}
