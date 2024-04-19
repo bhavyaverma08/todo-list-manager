@@ -1,6 +1,7 @@
 .todo-card-style {
   border: 1px solid #edebca;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .delete-btn{

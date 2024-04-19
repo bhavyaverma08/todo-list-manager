@@ -1,10 +1,14 @@
-<div class="container todo-card-style p-2 shadow-sm">
-  <div class="todo-header" [ngStyle]="{ 'display': 'flex', 'justify-content':'space-between' }">
-    <p>Todo title</p>
-    <p>Todo status</p>
+<div class="container todo-card-style p-2">
+  <div
+    class="todo-header"
+    [ngStyle]="{ display: 'flex', 'justify-content': 'space-between' }"
+  >
+    <p>{{ todo.title }}</p>
+    <div *ngIf="todo.complete; else elseBlock">Completed</div>
+    <ng-template #elseBlock>Pending</ng-template>
   </div>
   <div class="todo-content">
-    <p>Todo Description</p>
+    <p>{{ todo.content }}</p>
   </div>
   <div class="todo-footer">
     <button class="btn delete-btn">Delete</button>
