@@ -3,31 +3,42 @@
     <div class="col-md-6 offset-md-3">
       <div class="card my-4 border-0 shadow-sm">
         <div class="card-body">
-          <h3 >Add Todo</h3>
-          <div class="mt-4">
-            <label for="">Todo Title</label>
-            <input
-              type="text"
-              class="form-control mt-2"
-              placeholder="Enter here"
-            />
-          </div>
-          <div class="mt-4">
-            <label for="">Todo Description</label>
-            <textarea
-              rows="5"
-              class="form-control mt-2"
-              placeholder="Enter here"
-            ></textarea>
-          </div>
-          <div class="mt-4">
-            <input class="me-2 ms-2" type="checkbox" />
-            <label for="">Mark as done</label>
-          </div>
-          <div class="container text-center mt-4">
-            <button class="btn primary-btn">Add Todo</button
-            ><button class="btn secondary-btn ms-4">Reset</button>
-          </div>
+          <h3>Add Todo</h3>
+          <form (ngSubmit)="submitForm($event)" (ngReset)="handleReset($event)">
+            <div class="mt-4">
+              <label for="">Todo Title</label>
+              <input
+                type="text"
+                class="form-control mt-2"
+                placeholder="Enter here"
+                name="title"
+                [(ngModel)]="mytodo.title"
+              />
+            </div>
+            <div class="mt-4">
+              <label for="">Todo Description</label>
+              <textarea
+                rows="5"
+                class="form-control mt-2"
+                placeholder="Enter here"
+                name="content"
+                [(ngModel)]="mytodo.content"
+              ></textarea>
+            </div>
+            <div class="mt-4">
+              <input
+                name="complete"
+                [(ngModel)]="mytodo.complete"
+                class="me-2 ms-2"
+                type="checkbox"
+              />
+              <label for="">Mark as done</label>
+            </div>
+            <div class="container text-center mt-4">
+              <button type="submit" class="btn primary-btn">Add Todo</button>
+              <button type="reset" class="btn secondary-btn ms-4">Reset</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
