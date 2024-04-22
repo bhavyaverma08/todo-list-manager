@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DialogService } from '../../services/dialog-service';
 
 @Component({
   selector: 'todo-card',
@@ -8,6 +9,11 @@ import { Component, Input } from '@angular/core';
 export class TodoCardComponent {
   @Input() todo: any; // Define an input property to receive the todo object from the parent component
   @Input() sharedData: any;
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  constructor(private dialogService: DialogService) {}
+
+  openDialog(clickedTodo: any) {
+    this.dialogService.openDialog(clickedTodo);
   }
 }
