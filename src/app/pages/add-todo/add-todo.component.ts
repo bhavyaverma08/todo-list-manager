@@ -27,7 +27,6 @@ export class AddTodoComponent {
       alert('Please enter some title to your TODO');
       return;
     }
-    console.log(this.mytodo);
     const newValue = [...SharedDataService.myTodoArray, { ...this.mytodo }];
     SharedDataService.myTodoArray = newValue;
     this.mytodo = new ParentTodo();

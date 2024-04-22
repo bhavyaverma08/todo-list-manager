@@ -12,7 +12,9 @@ import { AddTodoComponent } from './pages/add-todo/add-todo.component';
 import { ViewTodoComponent } from './pages/view-todo/view-todo.component';
 import { UpdateTodoComponent } from './pages/update-todo/update-todo.component';
 import { TodoCardComponent } from './components/todo-card/todo-card.component';
-
+import { TodoDetailsPopUpComponent } from './components/todo-details-pop-up/todo-details-pop-up.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +26,10 @@ import { TodoCardComponent } from './components/todo-card/todo-card.component';
     UpdateTodoComponent,
     TodoCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule,TodoDetailsPopUpComponent,MatDialogModule],
+  providers: [
+    { provide: MAT_DIALOG_DATA, useValue: {} }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {
